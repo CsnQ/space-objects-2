@@ -8,16 +8,28 @@ import { FireballDataService } from '../../services/fireball-data.service';
 })
 export class FireballInfoComponent implements OnInit {
   fireballData;
+  realFireBallData;
   countOfFireballs: number;
+  realCountOfFireBalls: number;
+  dateSubmitted:string;
 
   constructor(private FireballDataService: FireballDataService) {
     this.FireballDataService.fetchTestFireballData().then((data) => {
       this.fireballData = data;
       this.countOfFireballs = this.fireballData.count;
     })
+
+    this.FireballDataService.fetchDataByMinDate().then((data)=>{
+      this.realFireBallData = data;
+      this.realCountOfFireBalls=this.realFireBallData.count;
+    })
   }
   getNumberOfFireballs() {
     return this.countOfFireballs;
+  }
+
+  getNumberOfRealFireballs(){
+    return this.realCountOfFireBalls;
   }
   ngOnInit() {
   }
