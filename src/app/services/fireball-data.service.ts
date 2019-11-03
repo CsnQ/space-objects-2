@@ -8,7 +8,7 @@ export class FireballDataService {
 
   constructor() { }
 
-   fetchFireballData() {
+   fetchTestFireballData() {
     return new Promise((resolve, reject) => {
         resolve(fireBallTestData);
     });

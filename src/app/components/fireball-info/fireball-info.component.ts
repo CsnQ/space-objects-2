@@ -8,10 +8,10 @@ import { FireballDataService } from '../../services/fireball-data.service';
 })
 export class FireballInfoComponent implements OnInit {
   fireballData;
-  countOfFireballs;
+  countOfFireballs: number;
 
   constructor(private FireballDataService: FireballDataService) {
-    this.FireballDataService.fetchFireballData().then((data) => {
+    this.FireballDataService.fetchTestFireballData().then((data) => {
       this.fireballData = data;
       this.countOfFireballs = this.fireballData.count;
     })
