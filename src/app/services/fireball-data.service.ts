@@ -8,10 +8,10 @@ export class FireballDataService {
 
   constructor() { }
 
-  fetchFireballData() {
+   fetchFireballData() {
     return new Promise((resolve, reject) => {
         resolve(fireBallTestData);
-      });
+    });
   }
   
   

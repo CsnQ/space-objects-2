@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FireballDataService} from '../../services/fireball-data.service';
 
 @Component({
   selector: 'app-fireball-info',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fireball-info.component.scss']
 })
 export class FireballInfoComponent implements OnInit {
+  fireballData;
+  countOfFireballs;
 
-  constructor() { }
-
+  constructor(private FireballDataService: FireballDataService) {
+    this.FireballDataService.fetchFireballData().then((data)=>{
+      this.fireballData = data;
+      this.countOfFireballs = this.fireballData.count;
+    })
+   }
+  getNumberOfFireballs(){
+    return this.countOfFireballs;
+  }
   ngOnInit() {
   }
 
