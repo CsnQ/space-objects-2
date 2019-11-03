@@ -6,7 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestMapComponent } from './components/test-map/test-map.component';
 
+import{FireballDataService } from  './services/fireball-data.service'
+
 import {key} from '../config/gMaps';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,7 @@ import {key} from '../config/gMaps';
     }),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FireballDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
