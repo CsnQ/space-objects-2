@@ -7,22 +7,27 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FireballDataService {
 
-  constructor(private http:HttpClient) {
-    
-   }
+  constructor(private http:HttpClient) {}
 
-   fetchTestFireballData() {
+  public fetchTestFireballData() {
     return new Promise((resolve, reject) => {
         resolve(fireBallTestData);
     });
   }
 
-  fetchDataByMinDate(){
+  public fetchDataByMinDate(){
     return this.http.get('https://ssd-api.jpl.nasa.gov/fireball.api?date-min=2019-09-01&req-loc=true')
     .toPromise()
     .then(data => data)
+    // .then(data => this.hydrateFireballs(data))
     .catch()
   }
   
-  
+  // private hydrateFireballs(data) {
+  //   // returns neat little interface
+  //   return IFireball {
+  //     something: data.something,
+
+  //   }
+  // }
 }
