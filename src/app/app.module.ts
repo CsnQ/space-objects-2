@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import {FireballInfoComponent} from './components/fireball-info/fireball-info.co
 import{FireballDataService } from  './services/fireball-data.service'
 
 import {key} from '../config/gMaps';
+
 
 
 
@@ -24,7 +26,8 @@ import {key} from '../config/gMaps';
     AgmCoreModule.forRoot({
       apiKey: key,
     }),
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule,
   ],
   providers: [FireballDataService],
   bootstrap: [AppComponent]
