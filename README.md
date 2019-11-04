@@ -3,7 +3,7 @@
 
 ## About this project
 Every time an object burns up in the Earth's atmosphere and is observed, that observation is logged in the fireball data API (https://ssd-api.jpl.nasa.gov/doc/fireball.html). 
-The aim of this project is to use Angular, Angular Google Maps, Typescript and Typescript services to display that data on a map and allow users to search that data for themselves
+The aim of this project is to use Angular, Angular Google Maps, Typescript and the concept of services to display that data on a map and allow users to search that data for themselves
 
 ## Check List for creating v1.0
 - [x] Setup connection to Google Maps API
