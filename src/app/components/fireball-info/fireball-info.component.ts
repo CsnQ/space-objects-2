@@ -12,6 +12,7 @@ export class FireballInfoComponent implements OnInit {
   countOfFireballs: number;
   realCountOfFireBalls: number;
   dateSubmitted:string;
+  coordinates: string[];
 
   constructor(private FireballDataService: FireballDataService) {
     this.FireballDataService.fetchTestFireballData().then((data) => {
@@ -19,17 +20,24 @@ export class FireballInfoComponent implements OnInit {
       this.countOfFireballs = this.fireballData.count;
     })
 
-    this.FireballDataService.fetchDataByMinDate().then((data)=>{
-      this.realFireBallData = data;
-      this.realCountOfFireBalls=this.realFireBallData.count;
-    })
+    // this.FireballDataService.fetchDataByMinDate().then((data)=>{
+    //   this.realFireBallData = data;
+    //   this.realCountOfFireBalls=this.realFireBallData.count;
+    // })
   }
   getNumberOfFireballs() {
+    this.getCoordinatesForFireballs();
     return this.countOfFireballs;
   }
 
+  getCoordinatesForFireballs(){
+    console.log(this.fireballData.data[0]);
+
+  }
+
   getNumberOfRealFireballs(){
-    return this.realCountOfFireBalls;
+    // return this.realCountOfFireBalls;
+    return "commented out whilst building app"
   }
   ngOnInit() {
   }
