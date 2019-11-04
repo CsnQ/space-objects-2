@@ -1,4 +1,36 @@
-# SpaceObjects
+# Space Objects - Angular, Services and Angular Google Maps - A work in progress 
+
+
+## About this project
+Every time an object burns up in the Earth's atmosphere and is observed, that observation is logged in the fireball data API (https://ssd-api.jpl.nasa.gov/doc/fireball.html). 
+The aim of this project is to use Angular, Angular Google Maps, Typescript and Typescript services to display that data on a map and allow users to search that data for themselves
+
+## Check List for creating v1.0
+- [x] setup connection to Google Maps API
+- [x] create Service that connects to the Fireball Data API
+- [x] get data from Fireball API and have that processed in another component
+- [ ] 'Hydrate' data to provide cleaner dataset to components
+- [ ] Write a function that will translate the DMS coordinates from the fireball data api into coordinates that can be processed by Google maps 
+- [ ] Display the location data for fireballs on a map with a marker
+- [ ] create component that allows a user to call the API with different parameters (i.e a date)
+- [ ] dynamically update the page based on the user input
+- [ ] organise components on to one page
+- [ ] add styling 
+
+## Key Technologies:
+* Angular
+* Typescript
+* Angular Google Maps
+
+## Key Angular Concepts:
+* creation of components with inputs and outputs 
+* creation of Services 
+* connecting services to APIs
+
+## Other Concepts:
+* Creating Interfaces
+* Promises in Javascript
+* Processing JSON messages 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
