@@ -6,9 +6,9 @@ Every time an object burns up in the Earth's atmosphere and is observed, that ob
 The aim of this project is to use Angular, Angular Google Maps, Typescript and the concept of services to display that data on a map and allow users to search that data for themselves
 
 ## Check List for creating v1.0
-- [x] Setup connection to Google Maps API
-- [x] Create Service that connects to the Fireball Data API
-- [x] Get data from Fireball API and have that processed in another component
+- [X] Setup connection to Google Maps API
+- [X] Create Service that connects to the Fireball Data API
+- [X] Get data from Fireball API and have that processed in another component
 - [ ] 'Hydrate' data to provide cleaner dataset to components
 - [ ] Write a function that will translate the DMS coordinates from the fireball data api into coordinates that can be processed by Google maps 
 - [ ] Display the location data for fireballs on a map with a marker
