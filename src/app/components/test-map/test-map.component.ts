@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestMapComponent implements OnInit {
   title = 'Fireball Mapper';
-  lat = 12.0;
-  lng = 76;
+  lat = -33.8;
+  lng = 151.2;
   constructor() { }
 
   ngOnInit() {
