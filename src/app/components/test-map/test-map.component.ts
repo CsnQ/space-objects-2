@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-map.component.scss']
 })
 export class TestMapComponent implements OnInit {
+
+  zoom =1;
   coordinates = [
     [12.0, 76.0],
     [51.5, 0.14],
@@ -13,8 +15,10 @@ export class TestMapComponent implements OnInit {
   ]
 
   title = 'My first AGM project';
-  lat = 51.678418;
-  lng = 7.809007;
+  lat = 21.678418;
+  lng = 20.809007;
+  mapType = 'satellite';
+
   constructor() { }
 
   ngOnInit() {
