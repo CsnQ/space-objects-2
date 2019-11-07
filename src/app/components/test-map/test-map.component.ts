@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-map.component.scss']
 })
 export class TestMapComponent implements OnInit {
-  title = 'My first AGM project';
-  lat = 51.678418;
-  lng = 7.809007;
+  title = 'Fireball Mapper';
+  lat = -33.8;
+  lng = 151.2;
   constructor() { }
 
   ngOnInit() {

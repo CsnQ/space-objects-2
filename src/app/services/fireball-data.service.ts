@@ -7,22 +7,47 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FireballDataService {
 
-  constructor(private http:HttpClient) {
-    
-   }
+  constructor(private http:HttpClient) {}
 
-   fetchTestFireballData() {
+  public fetchTestFireballData() {
     return new Promise((resolve, reject) => {
         resolve(fireBallTestData);
     });
   }
 
-  fetchDataByMinDate(){
-    return this.http.get('https://ssd-api.jpl.nasa.gov/fireball.api?date-min=2019-09-01&req-loc=true')
+  public fetchDataByMinDate(){
+    return this.http.get('https://ssd-api.jpl.nasa.gov/fireball.api?date-min=2019-10-01&req-loc=true')
     .toPromise()
-    .then(data => data)
+    //.then(data => data)
+    .then(data => this.hydrateFireballs(data))
     .catch()
   }
+
+  private convertLongLat(degrees, direction) {
+    switch(direction) {
+      case 'N':
+        return degrees;
+      case 'S':
+        return (degrees * -1);
+      case 'E':
+        return degrees;
+      case 'W':
+        return (degrees * -1);
+    }
+  }
   
-  
+  private hydrateFireballs(data) {
+    // returns neat little interface
+    console.log(data);
+    console.log(data.data);
+    console.log(data.data[0][0]);
+     return  {
+      count: data.data.count,
+      fireballs: data.data.forEach(fireball => {
+        date: fireball[0];
+        latitude: this.convertLongLat(fireball[3], fireball[4]);
+        longitude: this.convertLongLat(fireball[5], fireball[6]);
+      })    
+    }
+  }
 }
