@@ -18,8 +18,8 @@ export class FireballDataService {
   public fetchDataByMinDate(){
     return this.http.get('https://ssd-api.jpl.nasa.gov/fireball.api?date-min=2019-10-01&req-loc=true')
     .toPromise()
-    .then(data => data)
-    //.then(data => this.hydrateFireballs(data))
+    //.then(data => data)
+    .then(data => this.hydrateFireballs(data))
     .catch()
   }
 
@@ -38,9 +38,12 @@ export class FireballDataService {
   
   private hydrateFireballs(data) {
     // returns neat little interface
+    console.log(data);
+    console.log(data.data);
+    console.log(data.data[0][0]);
      return  {
       count: data.data.count,
-      fireballs: data.forEach(fireball => {
+      fireballs: data.data.forEach(fireball => {
         date: fireball[0];
         latitude: this.convertLongLat(fireball[3], fireball[4]);
         longitude: this.convertLongLat(fireball[5], fireball[6]);
