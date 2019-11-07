@@ -1,31 +1,31 @@
 
-// export interface IFireBall{
-//     count: string;
-//     fields: Ifields;
-//     signature: ISignature;
-//     data: IData;
+export interface IFireBall{
+    count: string;
+    fields: Ifields;
+    signature: ISignature;
+    data: IData;
 
-// }
+}
 
-// export interface Ifields{
+export interface Ifields{
     
-// }
+}
 
-// export interface IData{
-//     date: string;
-//     energy?: number;
-//     impactE?: number;
-//     latitude:number;
-//     latitudeDirection:string;
-//     longitude: number;
-//     LongitudeDirection:string;
-//     velocity?: number;
-// }
+export interface IData{
+    date: string;
+    energy?: number;
+    impactE?: number;
+    latitude:number;
+    latitudeDirection:string;
+    longitude: number;
+    LongitudeDirection:string;
+    velocity?: number;
+}
 
-// export interface ISignature{
-//     source: string;
-//     version: string;
-// }
+export interface ISignature{
+    source: string;
+    version: string;
+}
 
 
 export const fireBallTestData = {
