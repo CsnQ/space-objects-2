@@ -34,12 +34,14 @@ export class FireballInfoComponent implements OnInit {
     return "commented out whilst building app"
   }
 
+  bananas(){
+    console.log("bananas")
+  }
   showData(){
     console.log(this.realFireBallData);
   }
   ngOnInit() {
-    this.getNumberOfFireballs();
-    this.showData();
+ 
   }
 
 }
