@@ -34,9 +34,6 @@ export class FireballInfoComponent implements OnInit {
     return "commented out whilst building app"
   }
 
-  bananas(){
-    console.log("bananas")
-  }
   showData(){
     console.log(this.realFireBallData);
   }
