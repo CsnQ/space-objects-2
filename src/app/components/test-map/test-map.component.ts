@@ -8,20 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TestMapComponent implements OnInit {
   @Input() locations;
-  
+  //location data can be rendered directly in the HTML
   
   zoom =1;
-  coordinates = [
-     [12.0, -76.0],
-     [51.5, 0.14],
-     [60.5, 0.14]
-  ]
-
-  setLocations(){
-      console.log("*************")
-      console.log(this.locations)
-      console.log("*************")
-  }
+ 
 
   title = 'My first AGM project';
   lat = 21.678418;
@@ -35,7 +25,7 @@ export class TestMapComponent implements OnInit {
  
 
   ngOnInit() {
-    this.setLocations();
+    
   }
 
 }
