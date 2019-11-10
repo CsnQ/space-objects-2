@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test-map',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-map.component.scss']
 })
 export class TestMapComponent implements OnInit {
+  // @Input() locations;
 
   zoom =1;
   coordinates = [
