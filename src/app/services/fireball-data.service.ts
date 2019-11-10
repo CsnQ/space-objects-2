@@ -11,7 +11,7 @@ export class FireballDataService {
 
   public fetchTestFireballData() {
     return new Promise((resolve, reject) => {
-      resolve(fireBallTestData);
+      resolve(this.hydrateFireballs(fireBallTestData));
     });
   }
 
@@ -26,11 +26,11 @@ export class FireballDataService {
   private convertLongLat(degrees, direction) {
     switch (direction) {
       case 'N':
-        return degrees;
+        return degrees * 1;
       case 'S':
         return (degrees * -1);
       case 'E':
-        return degrees;
+        return degrees * 1;
       case 'W':
         return (degrees * -1);
     }
@@ -52,10 +52,10 @@ export class FireballDataService {
       //create the object
       const y = {
         date: normalisedData["date"],
-        "lat-deg": this.convertLongLat(normalisedData["lat"], normalisedData["lat-dir"]),
-        "lon-deg": this.convertLongLat(normalisedData["lon"], normalisedData["lon-dir"])
+        "latdeg": this.convertLongLat(normalisedData["lat"], normalisedData["lat-dir"]),
+        "londeg": this.convertLongLat(normalisedData["lon"], normalisedData["lon-dir"])
       };
-      
+
       //push to array
       fireballs.push(y);
     }

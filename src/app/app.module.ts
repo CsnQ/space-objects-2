@@ -11,6 +11,7 @@ import {FireballInfoComponent} from './components/fireball-info/fireball-info.co
 import{FireballDataService } from  './services/fireball-data.service'
 
 import {key} from '../config/gMaps';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 
 
@@ -19,7 +20,8 @@ import {key} from '../config/gMaps';
   declarations: [
     AppComponent,
     TestMapComponent,
-    FireballInfoComponent
+    FireballInfoComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

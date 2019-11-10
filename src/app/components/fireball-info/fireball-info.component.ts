@@ -12,24 +12,39 @@ export class FireballInfoComponent implements OnInit {
   countOfFireballs: number;
   realCountOfFireBalls: number;
   dateSubmitted:string;
-  coordinates: string[];
+ 
 
   constructor(private FireballDataService: FireballDataService) {
     this.FireballDataService.fetchTestFireballData().then((data) => {
       this.fireballData = data;
-      this.countOfFireballs = this.fireballData.count;
+      this.countOfFireballs = this.fireballData.length;
+      this.getNumberOfFireballs();
+      this.getLocationsFromData();
     })
 
-    this.FireballDataService.fetchDataByMinDate().then((data)=>{
-      this.realFireBallData = data;
-      console.log(data);
+    // this.FireballDataService.fetchDataByMinDate().then((data)=>{
+    //   this.realFireBallData = data;
+    //   console.log(data);
      
-    })
+    // })
   }
 
  
   getNumberOfFireballs() {
     return this.countOfFireballs;
+  }
+
+  getLocationsFromData(){
+    console.log(this.fireballData);
+    let locations = new Array;
+    for (let item in this.fireballData){
+     let x= this.fireballData[item].latdeg;
+     let y = this.fireballData[item].londeg;
+     console.log(x,y)
+     locations[item]=[x,y];
+    }
+    
+    
   }
 
   getNumberOfRealFireballs(){
