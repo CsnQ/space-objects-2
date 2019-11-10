@@ -3,6 +3,10 @@
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [mapTypeId]="'hybrid'">
+  <agm-marker *ngFor="let data of locations.locationData" [latitude]="data[0]" [longitude]="data[1]"></agm-marker>
 </agm-map>
+
+<p>location from map component:</p>
+<p>{{locations.locationData[0]}}</p>
+<p>{{ locations.locationData[1]}}</p>

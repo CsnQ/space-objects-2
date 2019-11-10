@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-test-map',
@@ -6,12 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-map.component.scss']
 })
 export class TestMapComponent implements OnInit {
-  title = 'Fireball Mapper';
-  lat = -33.8;
-  lng = 151.2;
-  constructor() { }
+  @Input() locations;
+  //location data can be rendered directly in the HTML
+  
+  zoom =1;
+ 
+
+  title = 'My first AGM project';
+  lat = 21.678418;
+  lng = 20.809007;
+  mapType = 'satellite';
+  
+  constructor() {
+    console.log("hello")
+   }
+  
+ 
 
   ngOnInit() {
+    
   }
 
 }
