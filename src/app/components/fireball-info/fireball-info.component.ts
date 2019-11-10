@@ -22,9 +22,12 @@ export class FireballInfoComponent implements OnInit {
 
     this.FireballDataService.fetchDataByMinDate().then((data)=>{
       this.realFireBallData = data;
-      this.realCountOfFireBalls=this.realFireBallData.count;
+      console.log(data);
+     
     })
   }
+
+ 
   getNumberOfFireballs() {
     return this.countOfFireballs;
   }
@@ -34,9 +37,6 @@ export class FireballInfoComponent implements OnInit {
     return "commented out whilst building app"
   }
 
-  showData(){
-    console.log(this.realFireBallData);
-  }
   ngOnInit() {
  
   }
