@@ -12,7 +12,7 @@ export class FireballInfoComponent implements OnInit {
   countOfFireballs: number;
   realCountOfFireBalls: number;
   dateSubmitted: string;
-  locations=[];
+  locations={'locationData': []};
 
 
   constructor(private FireballDataService: FireballDataService) {
@@ -43,7 +43,8 @@ export class FireballInfoComponent implements OnInit {
     for (let item in data) {
       let x = data[item].latdeg;
       let y = data[item].londeg;
-      this.locations[item] = [x, y];
+      //this.locations[item] = [x, y];
+      this.locations.locationData.push([x,y])
     }
   
   }
