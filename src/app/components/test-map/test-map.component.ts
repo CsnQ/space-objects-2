@@ -22,9 +22,13 @@ export class TestMapComponent implements OnInit {
     console.log("hello")
    }
   
- 
+   showdata(){
+     console.log("data is: ")
+     console.log(this.locations)
+   }
 
   ngOnInit() {
+    // this.showdata()
     
   }
 

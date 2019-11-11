@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 import { FireballDataService } from '../../services/fireball-data.service';
 
 @Component({
@@ -12,11 +12,11 @@ export class FireballInfoComponent implements OnInit {
   countOfFireballs: number;
   realCountOfFireBalls: number;
   dateSubmitted: string;
-  locations={'locationData': []};
+  // locations={'locationData': []};
+  locations = [];
 
 
   constructor(private FireballDataService: FireballDataService) {
-    this.getdata();
 
     // this.FireballDataService.fetchDataByMinDate().then((data)=>{
     //   this.realFireBallData = data;
@@ -29,7 +29,7 @@ export class FireballInfoComponent implements OnInit {
     this.FireballDataService.fetchTestFireballData().then((data) => {
       this.fireballData = data;
       this.countOfFireballs = this.fireballData.length;
-      console.log(this.fireballData);
+      // console.log(this.fireballData);
       this.getLocationsFromData(this.fireballData);
      
     })
@@ -41,12 +41,13 @@ export class FireballInfoComponent implements OnInit {
 
   getLocationsFromData(data) {
     for (let item in data) {
+      console.log(data[item])
       let x = data[item].latdeg;
       let y = data[item].londeg;
       //this.locations[item] = [x, y];
-      this.locations.locationData.push([x,y])
+      this.locations.push([x,y])
     }
-  
+    console.log(this.locations)
   }
 
   getNumberOfRealFireballs() {
@@ -55,7 +56,7 @@ export class FireballInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.getdata();
   }
 
 }
