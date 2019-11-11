@@ -11,9 +11,8 @@ export class TestMapComponent implements OnInit {
   //location data can be rendered directly in the HTML
   
   zoom =1;
- 
-
-  title = 'My first AGM project';
+  title = 'Space Objects';
+  //default position of the map 
   lat = 21.678418;
   lng = 20.809007;
   mapType = 'satellite';
