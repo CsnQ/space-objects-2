@@ -1,7 +1,7 @@
 <p>Number of Fireballs in test data:</p>
 <p>{{countOfFireballs}}</p>
-<app-search-bar (handleSearch)="searchByDate($event)"></app-search-bar>
-<app-date-picker></app-date-picker>
+<p>get fireballs by min date</p>
+<app-date-picker (handleDateSearch) = searchByDate($event)></app-date-picker>
 <p>locations:</p>
 <p>{{locations[0]}}</p>
 <p>{{locations[1]}}</p>
