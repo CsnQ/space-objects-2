@@ -58,7 +58,7 @@ export class FireballInfoComponent implements OnInit {
   searchByDate(searchTerm){
     console.log("this is the parent: ")
     console.log(searchTerm)
-    this.FireballDataService.fetchDataByMinDate2(searchTerm).then((data) => {
+    this.FireballDataService.fetchDataByMinDate(searchTerm).then((data) => {
       this.fireballData = data;
       this.countOfFireballs = this.fireballData.length;
       // console.log(this.fireballData);

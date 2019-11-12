@@ -15,15 +15,8 @@ export class FireballDataService {
     });
   }
 
-  public fetchDataByMinDate() {
-    return this.http.get('https://ssd-api.jpl.nasa.gov/fireball.api?date-min=2019-10-01&req-loc=true')
-      .toPromise()
-      //.then(data => data)
-      .then(data => this.hydrateFireballs(data))
-      .catch()
-  }
-
-  public fetchDataByMinDate2(date) {
+  
+  public fetchDataByMinDate(date) {
     return this.http.get(`https://ssd-api.jpl.nasa.gov/fireball.api?date-min=${date}&req-loc=true`)
       .toPromise()
       //.then(data => data)
