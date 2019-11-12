@@ -1,3 +1,4 @@
-<p>search-bar works!</p>
-<input type="text" name="" id="">
-<button>search-bar</button>
+<div>
+    <input #search type="text"  (keydown.enter)="handleSearch.emit(search.value)">
+    <button (click)="handleSearch.emit(search.value)">Search</button>
+</div>
