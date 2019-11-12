@@ -12,8 +12,8 @@ The aim of this project is to use Angular, Angular Google Maps, Typescript and t
 - [X] 'Hydrate' data to provide cleaner dataset to components
 - [X] Write a function that will translate the DMS coordinates from the fireball data api into coordinates that can be processed by Google maps 
 - [X] Display the location data for fireballs on a map with a marker
-- [ ] Create component that allows a user to call the API with different parameters (i.e a date)
-- [ ] Dynamically update the page based on the user input
+- [X] Create component that allows a user to call the API with different parameters (i.e a date)
+- [X] Dynamically update the page based on the user input
 - [ ] Organise components on to one page
 - [ ] Add styling 
 
