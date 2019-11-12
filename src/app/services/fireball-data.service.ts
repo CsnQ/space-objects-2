@@ -23,6 +23,14 @@ export class FireballDataService {
       .catch()
   }
 
+  public fetchDataByMinDate2(date) {
+    return this.http.get(`https://ssd-api.jpl.nasa.gov/fireball.api?date-min=${date}&req-loc=true`)
+      .toPromise()
+      //.then(data => data)
+      .then(data => this.hydrateFireballs(data))
+      .catch()
+  }
+
   private convertLongLat(degrees, direction) {
     switch (direction) {
       case 'N':
