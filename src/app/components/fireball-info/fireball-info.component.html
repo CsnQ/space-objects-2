@@ -1,10 +1,9 @@
 <p>Number of Fireballs in test data:</p>
 <p>{{countOfFireballs}}</p>
-
+<app-search-bar (handleSearch)="searchByDate($event)" ></app-search-bar>
 <p>locations:</p>
 <p>{{locations[0]}}</p>
 <p>{{locations[1]}}</p>
-<app-search-bar></app-search-bar>
 <app-test-map [locations]="locations" ></app-test-map>
 
 

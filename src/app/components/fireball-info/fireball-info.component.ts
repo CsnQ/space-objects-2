@@ -55,6 +55,11 @@ export class FireballInfoComponent implements OnInit {
     return "commented out whilst building app"
   }
 
+  searchByDate(searchTerm){
+    console.log("this is the parent: ")
+    console.log(searchTerm)
+  }
+
   ngOnInit() {
     this.getdata();
   }
