@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,6 +13,7 @@ import{FireballDataService } from  './services/fireball-data.service'
 
 import {key} from '../config/gMaps';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { DatePickerComponent } from './components/date-picker/date-picker.component';
 
 
 
@@ -21,7 +23,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     AppComponent,
     TestMapComponent,
     FireballInfoComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     }),
     AppRoutingModule, 
     HttpClientModule,
+    FormsModule
   ],
   providers: [FireballDataService],
   bootstrap: [AppComponent]
