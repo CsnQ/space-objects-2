@@ -1,17 +1,53 @@
-<div class="info-container">
-    <div class="fact-card">
-        <p>Number of Fireballs in test data:</p>
-        <p>{{countOfFireballs}}</p>
+<div class="container-fluid">
+  <div class="row">
+    <!-- map section -->
+    <div class="col-md-7">
+      <div class="card text-white bg-info">
+        <h5 class="card-header">
+          map
+        </h5>
+        <div class="card-body">
+          <p class="card-text">
+            <app-test-map [locations]="locations"></app-test-map>
+          </p>
+        </div>
+        <div class="card-footer">
+          Card footer
+        </div>
+      </div>
     </div>
+    <!-- end of map section -->
 
-    <div class="date-container">
-        <p>get fireballs by min date</p>
-        <app-date-picker (handleDateSearch) = searchByDate($event)></app-date-picker>
+    <div class="col-md-5">
+      <div class="card text-white bg-primary">
+        <h5 class="card-header">
+          search by date
+        </h5>
+        <div class="card-body">
+          <p class="card-text">
+            <app-date-picker
+              (handleDateSearch)="searchByDate($event)"
+            ></app-date-picker>
+          </p>
+        </div>
+        <div class="card-footer">
+          Card footer
+        </div>
+      </div>
+      <div class="card text-white bg-primary">
+        <h5 class="card-header">
+          info card
+        </h5>
+        <div class="card-body">
+          <p class="card-text">
+            Number of Fireballs in test data:
+            {{ countOfFireballs }}
+          </p>
+        </div>
+        <div class="card-footer">
+          Card footer
+        </div>
+      </div>
     </div>
-
-    <div class="map-container">
-        <app-test-map [locations]="locations" ></app-test-map>
-    </div>
+  </div>
 </div>
-
-
