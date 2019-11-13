@@ -40,6 +40,7 @@ export class FireballInfoComponent implements OnInit {
   }
 
   getLocationsFromData(data) {
+    
     this.locations=[];
     for (let item in data) {
       console.log(data[item])

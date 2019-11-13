@@ -14,6 +14,7 @@ import{FireballDataService } from  './services/fireball-data.service'
 import {key} from '../config/gMaps';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 
 
@@ -24,7 +25,8 @@ import { DatePickerComponent } from './components/date-picker/date-picker.compon
     TestMapComponent,
     FireballInfoComponent,
     SearchBarComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
